@@ -1,0 +1,133 @@
+
+:root {
+    --bg-dark: #020617;
+    --card-glass: rgba(255, 255, 255, 0.03);
+    --accent-blue: #0ea5e9;
+    --accent-purple: #8b5cf6;
+    --text-white: #f8fafc;
+    --text-gray: #94a3b8;
+}
+
+body {
+    background-color: var(--bg-dark);
+    background-image: 
+        radial-gradient(at 0% 0%, rgba(14, 165, 233, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(139, 92, 246, 0.15) 0px, transparent 50%);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Inter', -apple-system, sans-serif;
+}
+
+/* Kartu Utama */
+.card {
+    background: var(--card-glass);
+    backdrop-filter: blur(20px); /* Efek Blur Kaca */
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    width: 90%;
+    max-width: 380px;
+    border-radius: 40px;
+    padding: 30px 20px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.8);
+    text-align: center;
+}
+
+/* Foto Profil dengan Border Gradasi */
+.profile-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    padding: 3px;
+    background: linear-gradient(to bottom, var(--accent-blue), var(--accent-purple));
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.name {
+    color: var(--text-white);
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    margin-bottom: 5px;
+}
+
+.job {
+    color: var(--accent-blue);
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+/* List Link Project */
+.link-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 18px 25px;
+    margin-bottom: 12px;
+    border-radius: 20px;
+    color: var(--text-white);
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid transparent;
+}
+
+.link-box:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-3px);
+    border-color: var(--accent-blue);
+    box-shadow: 0 10px 20px -5px rgba(14, 165, 233, 0.3);
+}
+
+/* Tombol CV Neon */
+.cv-btn {
+    display: block;
+    background: linear-gradient(90deg, var(--accent-blue), var(--accent-purple));
+    color: white;
+    padding: 18px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 700;
+    margin: 25px 0;
+    box-shadow: 0 10px 25px -5px rgba(99, 102, 241, 0.4);
+    transition: 0.3s;
+}
+
+.cv-btn:hover {
+    filter: brightness(1.1);
+    transform: scale(1.02);
+}
+
+/* Social Media Icons */
+.social-group {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-item {
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.3rem;
+    transition: 0.3s;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.social-item:hover {
+    background: var(--text-white);
+    color: var(--bg-dark);
+    transform: rotate(10deg);
+}
